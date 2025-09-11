@@ -27,7 +27,7 @@ function draw() {
 }
 
 function drawSky() {
-   backgroud(148,203,246); 
+   background(148,203,246); 
 }
 
 function drawOcean() {
