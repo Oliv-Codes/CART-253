@@ -31,17 +31,23 @@ function drawSky() {
 }
 
 function drawOcean() {
+    push();
     fill(111,238,216);
     noStroke();
     rect(640,300);
+    pop();
 }
 function drawSand() {
+    push();
     fill(200,190,120);
     noStroke();
     rect(240,100);
+    pop();
 }
 function drawSun() {
+    push();
     fill(255,255,255);
     noStroke();
     circle(80,80,130,300);
+    pop();
 }
