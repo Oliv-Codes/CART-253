@@ -12,6 +12,7 @@
 */
 function setup() {
 createCanvas(640,480)
+angleMode(DEGREES)
 }
 
 
@@ -24,6 +25,7 @@ function draw() {
     drawSun();
     drawOcean();
     drawSand();
+    drawBird();
 }
 
 function drawSky() {
@@ -48,6 +50,16 @@ function drawSun() {
     push();
     fill(255,230,0);
     noStroke();
-    circle(80,80,130,300);
+    circle(120,110,130,300);
+    pop();
+}
+function drawBird() {
+    push();
+    noFill()
+    stroke(0,0,0)
+    arc(300,150,80,30,180,0)
+    arc(380,150,80,30,180,0)
+    arc(420,200,60,20,180,0)
+    arc(480,200,60,20,180,0)
     pop();
 }
