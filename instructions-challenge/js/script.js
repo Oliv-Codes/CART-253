@@ -34,19 +34,19 @@ function drawOcean() {
     push();
     fill(111,238,216);
     noStroke();
-    rect(640,300);
+    rect(0,300,640,300);
     pop();
 }
 function drawSand() {
     push();
-    fill(200,190,120);
+    fill(320,190,120);
     noStroke();
-    rect(240,100);
+    rect(0,380,640,100);
     pop();
 }
 function drawSun() {
     push();
-    fill(255,255,255);
+    fill(255,230,0);
     noStroke();
     circle(80,80,130,300);
     pop();
