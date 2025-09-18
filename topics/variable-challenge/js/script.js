@@ -1,6 +1,6 @@
 /**
  * Mr. Furious
- * Pippin Barr
+ * Olivia
  *
  * A guy who becomes visibly furious!
  */
