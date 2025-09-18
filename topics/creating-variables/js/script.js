@@ -1,9 +1,8 @@
 /**
- * Title of Project
+ * Creating Variables
  * Olivia
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * experimenting with variables
  */
 
 "use strict";
@@ -12,21 +11,22 @@
  * Creaing canvas
 */
 function setup() {
-    createCanvas (640,640)
+    createCanvas (480,480)
 
 }
 
 
 /**
- * Draw circle in center of canvas
+ * Draw hole in cheese
 */
 function draw() {
-    background(0)
+    background(255,255,0)
 
-    // Draw circle
+    // Draw hole
     push();
-    fill(255,255,0);
+    fill(0);
     noStroke();
-    ellipse(mouseX, mouseY, 100 , 100);
+    ellipse(140,175,180);
+    pop();
 
 }
