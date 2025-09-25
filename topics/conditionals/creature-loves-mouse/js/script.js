@@ -49,6 +49,12 @@ function draw() {
  */
 function checkInput() {
     // We'll need to figure this out
+    if (mouseIsPressed) {
+        creature.fill = creature.fill.happy;
+    }
+    else {
+        creature.fill = creature.fill.bored;
+    }
 }
 
 /**
