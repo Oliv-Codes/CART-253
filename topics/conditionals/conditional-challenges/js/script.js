@@ -8,7 +8,7 @@
 
 const puck = {
   x: 200,
-  y: 200,
+  y: 300,
   size: 100,
   fill: "#ff0000"
 };
