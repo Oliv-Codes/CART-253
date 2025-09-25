@@ -14,11 +14,22 @@ function setup() {
 createCanvas(480, 640);
 }
 
+//Varables
+
+//colour
+let hair = {
+r: 45,
+g: 30,
+b: 20
+}
+
 /**
  * Calling functions to draw
 */
 function draw() {
     drawSky();
+    drawHead();
+    drawJaw();
  
 }
 
@@ -33,6 +44,14 @@ function drawHead() {
     push();
     fill(215,175,120);
     noStroke();
-    circle(120,90,130,300);
+    circle(240,300,220,300);
+    pop();
+}
+
+function drawJaw() {
+    push();
+    fill(215,175,120);
+    noStroke();
+     square(140, 250, 200, 50);;
     pop();
 }
