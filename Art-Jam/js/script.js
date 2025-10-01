@@ -16,7 +16,7 @@ createCanvas(480, 640);
 
 //Varables
 
-//colour
+//colours
 let hair = {
 r: 45,
 g: 30,
@@ -29,8 +29,10 @@ b: 20
 function draw() {
     drawSky();
     drawHead();
+    drawNeck();
     drawJaw();
- 
+    drawBang();
+    
 }
 
 function drawSky() {
@@ -53,5 +55,21 @@ function drawJaw() {
     fill(215,175,120);
     noStroke();
      square(140, 250, 200, 50);;
+    pop();
+}
+
+function drawNeck() {
+    push();
+    fill(200,135,105);
+    noStroke();
+     square(180, 390, 120, 50);;
+    pop();
+}
+
+function drawBang() {
+    push();
+    fill(hair.r,hair.g,hair.b);
+    noStroke();
+    elipse(240,300,120,400);
     pop();
 }
