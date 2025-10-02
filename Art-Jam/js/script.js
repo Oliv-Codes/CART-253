@@ -29,6 +29,7 @@ b: 20
 function draw() {
     drawSky();
     drawHead();
+    drawHair()
     drawNeck();
     drawJaw();
     drawBang();
@@ -66,10 +67,34 @@ function drawNeck() {
     pop();
 }
 
+function drawBlu() {
+    push();
+    fill(0,50,255);
+    noStroke();
+    quad(350, 340, 250, 285, 250, 230, 350, 250);
+    pop();
+}
 function drawBang() {
     push();
     fill(hair.r,hair.g,hair.b);
     noStroke();
-    elipse(240,300,120,400);
+    ellipse(210,230,180,120);
+    ellipse(292,240,120,110);
+    quad(120, 340, 250, 285, 160, 230, 130, 250);
+    quad(300, 340, 260, 285, 160, 230, 130, 250);
+    quad(350, 340, 250, 285, 250, 230, 350, 250);
+    rect(120, 230, 20, 200);
+    rect(337, 230, 15, 190);
+    pop();
+}
+
+
+function drawHair() {
+    push();
+    fill(hair.r,hair.g,hair.b);
+    noStroke();
+    ellipse(140,400,50,200);
+    ellipse(330,400,50,200);
+    rect(140, 300, 200, 200);
     pop();
 }
