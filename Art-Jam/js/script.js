@@ -37,6 +37,12 @@ let eye = {
     b: 255,
 }
 
+let shade = {
+    r: 200,
+    g: 135,
+    b: 105,
+}
+
 /**
  * Calling functions to draw
 */
@@ -51,6 +57,7 @@ function draw() {
     drawBang();
     drawEye();
     drawDot();
+    blink();
 }
 
 function drawSky() {
@@ -145,4 +152,11 @@ function drawEye() {
     bezier(170, 360, 240, 410, 240, 305, 170, 360);
     bezier(310, 360, 240, 410, 240, 305, 310, 360);
     pop();
+}
+
+//Making blink
+function blink(){
+if (mouseIsPressed) {
+    fill(eye.r = shade.r , eye.g = shade.g, eye.b = shade.b)
+}
 }
