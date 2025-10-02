@@ -18,6 +18,11 @@ createCanvas(480, 640);
 
 //Varables
 
+let box = {
+    x:0,
+    y:600,
+}
+
 //colours
 let sky = {
     r: 125,
@@ -32,9 +37,9 @@ let hair = {
 }
 
 let eye = {
-    r: 255,
-    g: 255,
-    b: 255,
+    fill: "#ffffffff",
+    open: "#ffffffff",
+    closed: "#C88769",
 }
 
 let shade = {
@@ -48,23 +53,33 @@ let shade = {
 */
 function draw() {
     drawSky();
+    drawBox();
     drawHead();
-    drawHair()
+    drawHair();
     drawShirt();
     drawNeck();
-    drawBlu();
+    drawSide();
     drawJaw();
     drawBang();
     drawEye();
     drawDot();
     blink();
+  
 }
 
 function drawSky() {
-    sky.r = sky.r  -2
-    sky.g = sky.g  -2
-    sky.b = sky.b  -2
+    sky.r = sky.r  -1
+    sky.g = sky.g  -1
+    sky.b = sky.b  -1
      background(sky.r, sky.g, sky.b);
+}
+
+function drawBox(){
+    push();
+    fill ("#716161ff")
+    rect(box.x,box.y = box.y +1,480,700,)
+    box.y = constrain(box.y,700)
+    pop();
 }
 
 /**
@@ -112,7 +127,7 @@ function drawShirt() {
     pop();
 }
 
-function drawBlu() {
+function drawSide() {
     push();
     fill(0,50,255);
     noStroke();
@@ -147,7 +162,7 @@ function drawHair() {
 
 function drawEye() {
     push();
-    fill(eye.r,eye.g,eye.b);
+    fill(eye.fill);
     noStroke();
     bezier(170, 360, 240, 410, 240, 305, 170, 360);
     bezier(310, 360, 240, 410, 240, 305, 310, 360);
@@ -156,7 +171,10 @@ function drawEye() {
 
 //Making blink
 function blink(){
-if (mouseIsPressed) {
-    fill(eye.r = shade.r , eye.g = shade.g, eye.b = shade.b)
-}
+    if (mouseIsPressed) {
+        eye.fill = eye.closed
+    }
+    else {
+        eye.fill = eye.open
+    }
 }
