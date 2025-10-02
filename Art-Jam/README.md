@@ -1,8 +1,8 @@
-# TITLE OF PROJECT
+# Art Jam
 
 AUTHOR NAME: Olivia Ho
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://oliv-codes.github.io/CART-253/Art-Jam/)
 
 ## Description
 

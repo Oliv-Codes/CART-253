@@ -25,9 +25,9 @@ let box = {
 
 //colours
 let sky = {
-    r: 125,
-    g: 105,
-    b: 100,
+    r: 30,
+    g: 10,
+    b: 110,
 }
 
 let hair = {
@@ -76,11 +76,14 @@ function drawSky() {
 
 function drawBox(){
     push();
-    fill ("#716161ff")
-    rect(box.x,box.y = box.y +1,480,700,)
-    box.y = constrain(box.y,700)
+    fill ("#564137ff")
+    rect(box.x,box.y,480,700)
     pop();
+    box.y = box.y - 1
+    box.y = constrain(box.y,0,600)
+    console.log(box.x,box.y)
 }
+
 
 /**
  My draws
