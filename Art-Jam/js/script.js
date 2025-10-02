@@ -16,7 +16,7 @@ createCanvas(480, 640);
 
 
 
-//Varables
+//Variables
 
 let box = {
     x:0,

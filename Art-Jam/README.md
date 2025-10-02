@@ -6,19 +6,22 @@ AUTHOR NAME: Olivia Ho
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+> This is a simple self protrait.
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
+> I used a bezier for the first time. I used it for some eyes. It was very finicky to use, but I got it to work.
 
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
+> You may click to make me blink! This is my conditional.
 
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
+> You may use the mouse to give me a clown nose. This is my use of mouseX and mouseY
+
+> Background turns to black as a new backdrop appears. This is my variable.
+
 
 ## Screenshot(s)
 
 This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
 
-> ![Image of a clown face](./assets/images/clown.png)
+> ![Image of portrait](./assets/images/screenshot.png)
 
 ## Attribution
 
