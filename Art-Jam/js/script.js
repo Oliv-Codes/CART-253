@@ -14,6 +14,8 @@ function setup() {
 createCanvas(480, 640);
 }
 
+
+
 //Varables
 
 //colours
@@ -47,7 +49,8 @@ function draw() {
     drawBlu();
     drawJaw();
     drawBang();
-    drawEye();    
+    drawEye();
+    drawDot();
 }
 
 function drawSky() {
@@ -60,6 +63,16 @@ function drawSky() {
 /**
  My draws
 */
+
+
+function drawDot(){
+    push();
+    fill ("#ff0000ff")
+    ellipse(mouseX, mouseY, 30, 30);
+    pop();
+}
+
+
 function drawHead() {
     push();
     fill(215,175,120);
@@ -80,7 +93,7 @@ function drawNeck() {
     push();
     fill(200,135,105);
     noStroke();
-     square(183, 390, 115, 43);;
+    square(183, 390, 115, 43);;
     pop();
 }
 
