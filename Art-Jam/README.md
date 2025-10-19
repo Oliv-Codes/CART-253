@@ -6,9 +6,13 @@ AUTHOR NAME: Olivia Ho
 
 ## Description
 
-> This is a simple self protrait.
+>I used a curve for the fist time
 
-> I used a bezier for the first time. I used it for some eyes. It was very finicky to use, but I got it to work.
+>Made it blink if you click
+
+>Made a red mouse cursor
+
+>Background changes colour
 
 > You may click to make me blink! This is my conditional.
 
@@ -16,10 +20,7 @@ AUTHOR NAME: Olivia Ho
 
 > Background turns to black as a new backdrop appears. This is my variable.
 
-
 ## Screenshot(s)
-
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
 
 > ![Image of portrait](./assets/images/screenshot.png)
 
