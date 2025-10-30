@@ -43,6 +43,15 @@ const fly = {
     speed: 3
 };
 
+// Poison Bug
+const psnbug = {
+    x: 0,
+    y: 300, // Will be random
+    fill: ("#ae1515ff"),
+    size: 10,
+    speed: 5
+}
+
 /**
  * Creates the canvas and initializes the fly
  */
@@ -56,7 +65,9 @@ function setup() {
 function draw() {
     background("#87ceeb");
     moveFly();
+    movePsnbug ();
     drawFly();
+    drawPsnbug ();
     moveFrog();
     moveTongue();
     drawFrog();
@@ -76,6 +87,15 @@ function moveFly() {
     }
 }
 
+function movePsnbug() {
+    // Move the fly
+    psnbug.x += psnbug.speed;
+    // Handle the fly going off the canvas
+    if (psnbug.x > width) {
+        resetPsnbug();
+    }
+}
+
 /**
  * Draws the fly as a black circle
  */
@@ -87,12 +107,25 @@ function drawFly() {
     pop();
 }
 
+function drawPsnbug() {
+    push();
+    noStroke();
+    fill(psnbug.fill)
+    ellipse(psnbug.x, psnbug.y, psnbug.size);
+    pop();
+}
+
 /**
  * Resets the fly to the left with a random y
  */
 function resetFly() {
     fly.x = 0;
     fly.y = random(0, 300);
+}
+
+function resetPsnbug() {
+    psnbug.x = random (0,30);
+    psnbug.y = random(0, 100);
 }
 
 /**
