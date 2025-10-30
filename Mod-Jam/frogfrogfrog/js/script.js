@@ -261,7 +261,7 @@ function drawHunger() {
     fill("#ff0000ff")
     rect(50, 80, 50, 300);
     fill("#000000ff")
-    text('Hunger Meter', 40, 400);
+    text('Fullness Meter', 40, 400);
     pop();
 }
 
