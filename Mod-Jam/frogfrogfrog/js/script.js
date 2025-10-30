@@ -8,6 +8,7 @@
  * - Move the frog with your mouse
  * - Click to launch the tongue
  * - Catch flies
+ * - Avoid red flies
  * 
  * Made with p5
  * https://p5js.org/
@@ -52,6 +53,22 @@ const psnbug = {
     speed: 5
 }
 
+let hunger = {
+    x: 50,
+    y: 300, //will become smaller when
+}
+
+let gameLost = false
+
+let win; 
+let lose; 
+function preload() {
+win = loadImage('assets/images/clown.png');
+  lose = loadImage('assets/images/lose.png');
+}
+
+
+
 /**
  * Creates the canvas and initializes the fly
  */
@@ -71,7 +88,15 @@ function draw() {
     moveFrog();
     moveTongue();
     drawFrog();
+    drawHunger();
+    drawHungerLVL ();
     checkTongueFlyOverlap();
+    checkTonguePoisoned();
+    drawWin();
+    if (gameLost===true) {
+        drawLost();
+    }
+    
 }
 
 /**
@@ -202,7 +227,23 @@ function checkTongueFlyOverlap() {
         resetFly();
         // Bring back the tongue
         frog.tongue.state = "inbound";
+        hunger.y=hunger.y-20
     }
+}
+
+//Poisoned
+function checkTonguePoisoned() {
+    // Get distance from tongue to fly
+    const d = dist(frog.tongue.x, frog.tongue.y, psnbug.x, psnbug.y);
+    // Check if it's an overlap
+    const poisoned = (d < frog.tongue.size/2 + psnbug.size/2);
+    if (poisoned) {
+       gameLost = true
+    }
+}
+
+function drawLost(){
+    image (lose,0,0)
 }
 
 /**
@@ -212,4 +253,25 @@ function mousePressed() {
     if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
     }
+}
+
+// Hunger meter
+function drawHunger() {
+    push();
+    fill("#ff0000ff")
+    rect(50, 80, 50, 300);
+    fill("#000000ff")
+    text('Hunger Meter', 40, 400);
+    pop();
+}
+
+function drawHungerLVL (){
+    rect(50, 80, 50,hunger.y);
+    fill("#b4edf5ff")
+}
+
+function drawWin() {
+ if (hunger.y<=20) {
+    image (win,0,0)
+ }
 }
