@@ -63,7 +63,7 @@ let gameLost = false
 let win; 
 let lose; 
 function preload() {
-win = loadImage('assets/images/clown.png');
+win = loadImage('assets/images/win.png');
   lose = loadImage('assets/images/lose.png');
 }
 
