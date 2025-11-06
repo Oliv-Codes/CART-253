@@ -60,11 +60,16 @@ let hunger = {
 
 let gameLost = false
 
+
 let win; 
 let lose; 
+let start;
+// Whether to show the start image (title screen) — true by default
+let showStart = true;
 function preload() {
 win = loadImage('assets/images/win.png');
-  lose = loadImage('assets/images/lose.png');
+lose = loadImage('assets/images/lose.png');
+start = loadImage('assets/images/frogfrogfrog.png');
 }
 
 
@@ -80,6 +85,12 @@ function setup() {
 }
 
 function draw() {
+    // If the start/title screen is active, draw it and skip game logic
+    if (showStart) {
+        drawStart();
+        return;
+    }
+
     background("#87ceeb");
     moveFly();
     movePsnbug ();
@@ -92,10 +103,12 @@ function draw() {
     drawHungerLVL ();
     checkTongueFlyOverlap();
     checkTonguePoisoned();
+    //drawStart();
     drawWin();
     if (gameLost===true) {
         drawLost();
     }
+
     
 }
 
@@ -250,6 +263,13 @@ function drawLost(){
  * Launch the tongue on click (if it's not launched yet)
  */
 function mousePressed() {
+    // If the title/start screen is showing, hide it on the first click
+    if (showStart) {
+        showStart = false;
+        return; // don't launch the tongue when dismissing the start screen
+    }
+
+    // Otherwise, behave as before and launch the tongue if idle
     if (frog.tongue.state === "idle") {
         frog.tongue.state = "outbound";
     }
@@ -274,4 +294,11 @@ function drawWin() {
  if (hunger.y<=20) {
     image (win,0,0)
  }
+}
+
+function drawStart() {
+    // Draw the start/title image full screen while showStart is true
+    push();
+    image(start, 0, 0);
+    pop();
 }
