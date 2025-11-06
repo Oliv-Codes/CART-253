@@ -223,6 +223,17 @@ function drawFrog() {
     noStroke();
     ellipse(frog.body.x, frog.body.y, frog.body.size);
     pop();
+
+    // Draw frog eyes
+    push();
+    noStroke();
+    fill("#d5e496ff");
+    ellipse(frog.body.x-25, 450, 30);
+    ellipse(frog.body.x+25, 450, 30);
+    fill("#000000ff");
+    ellipse(frog.body.x-25, 445, 20, 10);
+    ellipse(frog.body.x+25, 445, 20, 10);
+    pop();
 }
 
 /**
