@@ -1,8 +1,8 @@
 # TITLE OF PROJECT
 
-AUTHOR NAME
+Olivia, Xueyi, Philippe
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://oliv-codes.github.io/CART-253/topics/loops/loops-challenge/)
 
 ## Description
 
