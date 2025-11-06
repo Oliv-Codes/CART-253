@@ -53,18 +53,18 @@ const psnbug = {
     speed: 5
 }
 
+// Hunger Meter
 let hunger = {
     x: 50,
-    y: 300, //will become smaller when
+    y: 300, //will become smaller when flies are eaten
 }
 
 let gameLost = false
 
-
+// Images
 let win; 
 let lose; 
 let start;
-// Whether to show the start image (title screen) — true by default
 let showStart = true;
 function preload() {
 win = loadImage('assets/images/win.png');
@@ -108,8 +108,6 @@ function draw() {
     if (gameLost===true) {
         drawLost();
     }
-
-    
 }
 
 /**
@@ -285,11 +283,13 @@ function drawHunger() {
     pop();
 }
 
+// Hunger level
 function drawHungerLVL (){
     rect(50, 80, 50,hunger.y);
     fill("#b4edf5ff")
 }
 
+// Win condition
 function drawWin() {
  if (hunger.y<=20) {
     image (win,0,0)
