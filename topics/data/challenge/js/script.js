@@ -1,24 +1,58 @@
 /**
- * Title of Project
- * Author Name
+ * Terrible New Car
+ * Pippin Barr
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * A program to generate new car model names using dinosaurs.
+ * 
+ * Uses:
+ * Darius Kazemi's corpora repository
+ * https://github.com/dariusk/corpora/tree/master
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+let carData = undefined;
+let dinosaurData = undefined;
+let langData = undefined;
+let lang = "fr";
 
+
+// Starts with the instruction
+let carName = "Click to generate a car name.";
+let dinosaurName = "Click to generate dinosaur name"
+
+/**
+ * Load the car and dinosaur data
+ */
+function preload() {
+    carData = loadJSON("assets/cars.json");
+    dinosaurData=loadJSON("assets/dinosaurs.json");
 }
 
+/**
+ * Create the canvas
+*/
+function setup() {
+    createCanvas(600, 400);
+}
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Display the current main text (either instructions or a car)
 */
 function draw() {
+    background(0);
 
+    push();
+    fill("pink");
+    textAlign(CENTER, CENTER);
+    textSize(32);
+    text(carName, width / 2, height / 2);
+    pop();
+}
+
+/**
+ * Generate a new car name
+ */
+function mousePressed() {
+    carName = (carData.cars [int(random(0,carData.cars.length))] + dinosaurData.dinosaurs [int(random(0,dinosaurData.dinosaurs.length))])
 }
