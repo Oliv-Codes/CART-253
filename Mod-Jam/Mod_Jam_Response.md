@@ -1,3 +1,5 @@
+# Frogfrogfrog
+
 Tasha Oest O Leary: https://mewmewpewpew.github.io/cart253/topics/mod-jam
 
 I liked this one, but I found it a bit too difficult. I haven't been able to beat the game. You have to balance two things at once; the pond's health and the frog's health. You don't win when the pond reaches perfect health, you have to just stay alive while keeping the pond alive. If you eat too many flies, the frog dies; if you let flies go, the pond dies. The only way to regain health is to eat fairies but there aren't enough fairies to keep up the frog's health. Also I found the frog's health bar difficult to see. I think it's a bit too small to see. But I did like it, I really liked how the frog looks. I love the concept conceptually it was just a bit too hard for me. 
