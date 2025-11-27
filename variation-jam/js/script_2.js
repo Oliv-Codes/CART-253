@@ -12,29 +12,17 @@
 */
 function setup() {
     createCanvas(640, 640);
-    cursor('assets/images/Wand_1_s.png');
-
+    cursor('assets/images/Wand_2_s2.png');
 }
-
-let trail = [];
-
 
 //Variables
 let heartImg;
-let heart2Img;
-let currentheart;
 
 //colours
 let sky = {
     r: 30,
     g: 10,
     b: 110,
-}
-
-let frog = {
-    r: 70,
-    g: 120,
-    b: 20,
 }
 
 //shake
@@ -51,7 +39,6 @@ let loveThoughts = "I have so much love"
 function preload () {
     loveData=loadJSON("/assets/love.json"); 
     heartImg = loadImage('assets/images/heart.png');
-    heart2Img = loadImage('assets/images/Wand_3_s.png')
 }
 
 
@@ -65,28 +52,14 @@ function draw() {
     drawFrog();
     drawNormalPupil();
     
-    
     // Check if mouse is over the frog
     if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
         drawSpeechBubble();drawHeartPupil(); drawThoughts();
     }
     
-    trail.push({ x: mouseX+ random (-30,30), y: mouseY+ random (-20,20) });
-    let maxTrailLength = 20; // Adjust this value for longer/shorter trails
-    if (trail.length > maxTrailLength) {
-        trail.shift(); // Remove the oldest element
-    }
-
     
-    for (let i = 0 ; i < trail.length; i++ ){
-        let pos = trail[i]
-        image (heartImg, pos.x , pos.y, 20, 20)
-        console.log(pos)
-
-    }
+    
 }
-    
-
 
 
 
@@ -106,7 +79,7 @@ function drawWater() {
 
 function drawFrog() {
     push();
-    fill (frog.r,frog.g,frog.b);
+    fill ("#499417ff");
     noStroke();
     rect(230, 280, 210, 210, 50);
     ellipse(200, 460, 250, 60);
