@@ -9,12 +9,21 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+* Create the canvas and background
 */
 function setup() {
-
+createCanvas(480, 640);
 }
 
+
+//Variables
+
+//colours
+let sky = {
+    r: 30,
+    g: 10,
+    b: 110,
+}
 
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
