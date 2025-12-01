@@ -51,7 +51,6 @@ let loveThoughts = "I have so much love"
 function preload () {
     loveData=loadJSON("/assets/love.json"); 
     heartImg = loadImage('assets/images/heart.png');
-    heart2Img = loadImage('assets/images/Wand_3_s.png')
 }
 
 
@@ -71,6 +70,8 @@ function draw() {
         drawSpeechBubble();drawHeartPupil(); drawThoughts();
     }
     
+
+    //Mouse Trail
     trail.push({ x: mouseX+ random (-30,30), y: mouseY+ random (-20,20) });
     let maxTrailLength = 20; // Adjust this value for longer/shorter trails
     if (trail.length > maxTrailLength) {
@@ -86,9 +87,6 @@ function draw() {
     }
 }
     
-
-
-
 
 //scene draws
 

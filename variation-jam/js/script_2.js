@@ -15,6 +15,8 @@ function setup() {
     cursor('assets/images/Wand_2_s2.png');
 }
 
+let trail = [];
+
 //Variables
 let heartImg;
 
@@ -57,9 +59,22 @@ function draw() {
         drawSpeechBubble();drawHeartPupil(); drawThoughts();
     }
     
+        //Mouse Trail
+    trail.push({ x: mouseX+ random (-30,30), y: mouseY+ random (-20,20) });
+    let maxTrailLength = 20; // Adjust this value for longer/shorter trails
+    if (trail.length > maxTrailLength) {
+        trail.shift(); // Remove the oldest element
+    }
+
     
-    
+    for (let i = 0 ; i < trail.length; i++ ){
+        let pos = trail[i]
+        image (heartImg, pos.x , pos.y, 20, 20)
+        console.log(pos)
+
+    }
 }
+    
 
 
 
