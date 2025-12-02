@@ -2,15 +2,13 @@
 
 Olivia Ho
 
-[View this project online](https://oliv-codes.github.io/CART-253/variation-jam/)
+[View this project online](https://oliv-codes.github.io/CART-253/variation-jam/index)
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+> For the first wand; the Love Wand; you may use it to reveal the thoughts from Frog's heart by overing it over him. 
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
-
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
+> For the secon wand; the Fly Wand; this one attracts flies. 
 
 > The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
 

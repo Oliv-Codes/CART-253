@@ -18,7 +18,7 @@ function setup() {
 let trail = [];
 
 //Variables
-let heartImg;
+let flyImg;
 
 //colours
 let sky = {
@@ -27,20 +27,21 @@ let sky = {
     b: 110,
 }
 
-//shake
-let shake = {
-    x:0,
-    y:0,
+let frog = {
+    r: 70,
+    g: 120,
+    b: 20,
 }
 
+
 //Love words array setup
-"use strict";
+
 let loveData = undefined
-let loveThoughts = "I have so much love"
+let loveThoughts = "Yummy yum"
 
 function preload () {
     loveData=loadJSON("/assets/love.json"); 
-    heartImg = loadImage('assets/images/heart.png');
+    flyImg = loadImage('assets/images/fly.png');
 }
 
 
@@ -69,7 +70,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (heartImg, pos.x + random (-30,30) , pos.y, 20, 20)
+        image (flyImg, pos.x + random (-30,30) , pos.y + random (-5,5), 20, 15)
         console.log(pos)
 
     }
@@ -94,7 +95,7 @@ function drawWater() {
 
 function drawFrog() {
     push();
-    fill ("#499417ff");
+    fill (frog.r,frog.g,frog.b);
     noStroke();
     rect(230, 280, 210, 210, 50);
     ellipse(200, 460, 250, 60);
