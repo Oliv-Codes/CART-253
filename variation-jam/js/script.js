@@ -1,6 +1,6 @@
 /**
  * Variation Jam
- * Olivia Ho
+ * 
  * 
  * 3 magic wands
  */
@@ -44,13 +44,14 @@ let shake = {
 }
 
 //Love words array setup
-"use strict";
+
 let loveData = undefined
 let loveThoughts = "I have so much love"
 
 function preload () {
-    loveData=loadJSON("/assets/love.json"); 
-    heartImg = loadImage('assets/images/heart.png');
+    loveData = loadJSON("assets/love.json");
+heartImg = loadImage("assets/images/heart.png");
+
 }
 
 

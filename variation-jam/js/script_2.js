@@ -56,7 +56,7 @@ function draw() {
     
     // Check if mouse is over the frog
     if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
-        drawSpeechBubble();drawHeartPupil(); drawThoughts();
+        drawSpeechBubble(); drawThoughts();
     }
     
         //Mouse Trail
@@ -69,7 +69,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (heartImg, pos.x , pos.y, 20, 20)
+        image (heartImg, pos.x + random (-30,30) , pos.y, 20, 20)
         console.log(pos)
 
     }
