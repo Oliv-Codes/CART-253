@@ -16,7 +16,7 @@ Olivia Ho
 
 This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
 
-> ![Image of a clown face](./assets/images/clown.png)
+> ![Image of a clown face](./assets/images/screenshots/Screenshot_1.png)
 
 ## Attribution
 
