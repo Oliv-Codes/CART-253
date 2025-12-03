@@ -113,8 +113,24 @@ function drawFrog() {
 function drawNormalPupil(){
     push();
     fill("black");
-    ellipse(280, 270, 20, 50);
-    ellipse(390, 270, 20, 50);
+    // pupils follow the mouse but stay within the eye area
+    const leftX = 275, leftY = 270;
+    const rightX = 395, rightY = 270;
+    const maxOffset = 16; // maximum pupil offset from eye center
+
+    function pupilPos(ex, ey) {
+        const mx = constrain(mouseX, 0, width);
+        const my = constrain(mouseY, 0, height);
+        const angle = atan2(my - ey, mx - ex);
+        const d = min(dist(mx, my, ex, ey), maxOffset);
+        return { x: ex + cos(angle) * d, y: ey + sin(angle) * d };
+    }
+
+    const pL = pupilPos(leftX, leftY);
+    const pR = pupilPos(rightX, rightY);
+
+    ellipse(pL.x, pL.y, 20, 50);
+    ellipse(pR.x, pR.y, 20, 50);
     pop();
 
 }
