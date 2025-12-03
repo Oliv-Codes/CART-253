@@ -62,6 +62,12 @@ function draw() {
     drawSky();
     drawWater();
     drawLilypad();
+    // update horizontal shake amount only when mouse is over the frog
+    if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
+        shake.x = random(-10, 10);
+    } else {
+        shake.x = 0;
+    }
     drawFrog();
     drawNormalPupil();
     
@@ -105,7 +111,9 @@ function drawWater() {
 
 function drawFrog() {
     push();
-    fill (frog.r,frog.g,frog.b);
+    // apply horizontal shake
+    translate(shake.x, 0);
+    fill(frog.r, frog.g, frog.b);
     noStroke();
     rect(230, 280, 210, 210, 50);
     ellipse(200, 460, 250, 60);
@@ -140,8 +148,9 @@ function drawHeartPupil(){
     if (heartImg) {
         const w = 50;
         const h = 50;
-        image(heartImg, 280, 270, w, h);
-        image(heartImg, 390, 270, w, h);
+        // Draw hearts with the same horizontal shake offset as the frog
+        image(heartImg, 280 + shake.x, 270, w, h);
+        image(heartImg, 390 + shake.x, 270, w, h);
     }
     pop();
 
