@@ -34,13 +34,13 @@ let frog = {
 }
 
 
-//Love words array setup
+//Yummy words array setup
 
-let loveData = undefined
-let loveThoughts = "Yummy yum"
+let yummyData = undefined
+let yummyThoughts = "Yummy yum"
 
 function preload () {
-    loveData=loadJSON("/assets/love.json"); 
+    yummyData = loadJSON("/assets/yummy.json"); 
     flyImg = loadImage('assets/images/fly.png');
 }
 
@@ -70,7 +70,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (flyImg, pos.x + random (-30,30) , pos.y + random (-5,5), 20, 15)
+        image (flyImg, pos.x + random (-30,30) , pos.y + random (-5,5), 25, 15)
         console.log(pos)
 
     }
@@ -119,18 +119,7 @@ function drawNormalPupil(){
 
 }
 
-function drawHeartPupil(){
-    push();
-    imageMode(CENTER);
-    if (heartImg) {
-        const w = 50;
-        const h = 50;
-        image(heartImg, 280, 270, w, h);
-        image(heartImg, 390, 270, w, h);
-    }
-    pop();
 
-}
 
 function drawLilypad() {
     push();
@@ -152,11 +141,11 @@ function drawThoughts() {
     fill("black");
     textAlign(CENTER, CENTER);
     textSize(29);
-    text(loveThoughts, 460, 100);
+    text(yummyThoughts, 460, 100);
     pop();
 }
 
 function mousePressed() {
-    loveThoughts = (loveData.love [int(random(0,loveData.love.length))])
-    console.log(loveData)
+    yummyThoughts = (yummyData.yummy[int(random(0,yummyData.yummy.length))])
+    console.log(yummyData)
 }

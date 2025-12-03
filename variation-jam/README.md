@@ -6,9 +6,9 @@ Olivia Ho
 
 ## Description
 
-> For the first wand; the Love Wand; you may use it to reveal the thoughts from Frog's heart by overing it over him. 
+> For the first wand; the Love Wand; you may use it to reveal the thoughts from Frog's heart by overing it over his heart. 
 
-> For the secon wand; the Fly Wand; this one attracts flies. 
+> For the secon wand; the Fly Wand; this one attracts flies. Reveal his thoughts by hovering over his tummy. 
 
 > The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
 

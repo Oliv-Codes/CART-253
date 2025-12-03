@@ -121,6 +121,11 @@ function drawFrog() {
 }
 
 function drawNormalPupil(){
+    // If mouse is over the frog, don't draw the normal pupils
+    if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
+        return;
+    }
+
     push();
     fill("black");
     ellipse(280, 270, 20, 50);
