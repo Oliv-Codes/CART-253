@@ -16,14 +16,16 @@ Olivia Ho
 
 This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
 
-> ![Image of a clown face](./assets/images/screenshots/Screenshot_1.png)
+> ![variation1](./assets/images/screenshots/Screenshot_1.png)
+> ![variation2](./assets/images/screenshots/Screenshot_2.png)
+> ![variation3](./assets/images/screenshots/Screenshot_3.png)
 
 ## Attribution
 
 This bit should attribute any code, assets or other elements used taken from other sources. For example:
 
 > - This project uses [p5.js](https://p5js.org).
-> - Music note is from Pixabay: Image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=303708">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=303708">Pixabay</a>
+> - Music note image by <a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=303708">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=303708">Pixabay</a>
 
 ## License
 
