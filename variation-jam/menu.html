@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wand Menu</title>
+  <style>
+    body { background: #000000; color: #ffffff; font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 40px; display:flex; flex-direction:column; align-items:center; }
+    h1 { color: #ffffff; text-align: center; margin-bottom: 20px; }
+    .wand-row { display:flex; gap:24px; align-items:center; justify-content:center; }
+    .wand { width:400px; height:auto; border-radius:8px; padding:8px; background:transparent; transition:transform .12s ease, box-shadow .12s ease; }
+    .wand:hover { transform:translateY(-6px);}
+    .label { margin-top:8px; font-size:14px; text-align:center; color: #ffffff; }
+    .small-note { margin-top:18px; color:rgba(255,255,255,0.7); }
+  </style>
+</head>
+<body>
+  <h1>Choose a Wand</h1>
+  <div class="wand-row">
+    <a href="heart.html" title="Wand 1">
+      <img class="wand" src="assets/images/Wand_1.png" alt="Wand 1">
+      <div class="label">Wand 1</div>
+    </a>
+    <a href="index2.html" title="Wand 2">
+      <img class="wand" src="assets/images/Wand_2.png" alt="Wand 2">
+      <div class="label">Wand 2</div>
+    </a>
+    <a href="#" title="Wand 3">
+      <img class="wand" src="assets/images/Wand_3.png" alt="Wand 3">
+      <div class="label">Wand 3</div>
+    </a>
+  </div>
+  <div class="small-note">See what each wand does!</div>
+</body>
+</html>
