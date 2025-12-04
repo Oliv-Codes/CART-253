@@ -40,7 +40,7 @@ let yummyData = undefined
 let yummyThoughts = "Yummy yum"
 
 function preload () {
-    yummyData = loadJSON("/assets/yummy.json"); 
+    yummyData = loadJSON("assets/yummy.json");
     flyImg = loadImage('assets/images/fly.png');
 }
 
@@ -76,8 +76,6 @@ function draw() {
     }
 }
     
-
-
 
 //scene draws
 
