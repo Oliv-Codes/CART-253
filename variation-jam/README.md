@@ -10,7 +10,7 @@ Olivia Ho
 
 > For the secon wand; the Fly Wand; this one attracts flies. Reveal his thoughts by hovering over his tummy. 
 
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
+> For the second wand; the Song Wand; you can help Frog sing!
 
 ## Screenshot(s)
 
