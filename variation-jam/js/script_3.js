@@ -1,6 +1,6 @@
 /**
  * Variation Jam
- * Olivia Ho
+ * wop
  * 
  * 3 magic wands
  */
@@ -116,7 +116,7 @@ function drawMouth(){
     push();
     fill("#53051fff");
     // Make mouth taller when mouse is higher on the canvas, smaller when mouse is lower
-    const minH = 10;
+    const minH = 8;
     const maxH = 120;
     // map mouseY (0 at top) so top -> maxH, bottom -> minH
     let mouthH = map(mouseY, 0, height, maxH, minH);
@@ -141,10 +141,15 @@ function drawSpeechBubble(){
 }
 
 function drawThoughts() {
-    push();
-    fill("black");
-    textAlign(CENTER, CENTER);
-    textSize(29);
-    text("la la LAAAAA", 460, 100);
-    pop();
+  push();
+  fill("black");
+  textAlign(CENTER, CENTER);
+  const minS = 15;
+  const maxS = 35;
+  // Map mouseX to a text size between minS and maxS
+  let textS = map(mouseY, 0, width,maxS,minS);
+  textS = constrain(textS, minS, maxS);
+  textSize(textS);
+  text("la la LAAAAA", 460, 100);
+  pop();
 }
