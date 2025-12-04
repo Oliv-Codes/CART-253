@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Three Wands
 
 Olivia Ho
 

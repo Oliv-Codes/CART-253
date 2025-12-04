@@ -64,7 +64,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (musicImg, pos.x + random (-30,30) , pos.y + random (-5,5), 25, 15)
+        image (musicImg, pos.x, pos.y, 25, 15)
         console.log(pos)
 
     }
