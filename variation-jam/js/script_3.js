@@ -150,6 +150,6 @@ function drawThoughts() {
   let textS = map(mouseY, 0, width,maxS,minS);
   textS = constrain(textS, minS, maxS);
   textSize(textS);
-  text("la la LAAAAA", 460, 100);
+  text("la la LAAAAA", 460, 125);
   pop();
 }
