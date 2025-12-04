@@ -12,13 +12,15 @@
 */
 function setup() {
     createCanvas(640, 640);
-    cursor('assets/images/Wand_2_s2.png');
+    cursor('assets/images/Wand_3_s.png');
 }
 
 let trail = [];
 
 //Variables
-let flyImg;
+let musicImg;
+
+
 
 //colours
 let sky = {
@@ -34,14 +36,8 @@ let frog = {
 }
 
 
-//Yummy words array setup
-
-let yummyData = undefined
-let yummyThoughts = "Yummy yum"
-
 function preload () {
-    yummyData = loadJSON("/assets/yummy.json"); 
-    flyImg = loadImage('assets/images/fly.png');
+    musicImg = loadImage('assets/images/note-303708_640.png');
 }
 
 
@@ -54,12 +50,10 @@ function draw() {
     drawLilypad();
     drawFrog();
     drawNormalPupil();
-    
-    // Check if mouse is over the frog
-    if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
-        drawSpeechBubble(); drawThoughts();
-    }
-    
+    drawMouth();
+    drawSpeechBubble(); 
+    drawThoughts();
+ 
         //Mouse Trail
     trail.push({ x: mouseX+ random (-30,30), y: mouseY+ random (-20,20) });
     let maxTrailLength = 20; // Adjust this value for longer/shorter trails
@@ -70,7 +64,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (flyImg, pos.x + random (-30,30) , pos.y + random (-5,5), 25, 15)
+        image (musicImg, pos.x + random (-30,30) , pos.y + random (-5,5), 25, 15)
         console.log(pos)
 
     }
@@ -113,29 +107,23 @@ function drawFrog() {
 function drawNormalPupil(){
     push();
     fill("black");
-    // pupils follow the mouse but stay within the eye area
-    const leftX = 275, leftY = 270;
-    const rightX = 395, rightY = 270;
-    const maxOffset = 16; // maximum pupil offset from eye center
-
-    function pupilPos(ex, ey) {
-        const mx = constrain(mouseX, 0, width);
-        const my = constrain(mouseY, 0, height);
-        const angle = atan2(my - ey, mx - ex);
-        const d = min(dist(mx, my, ex, ey), maxOffset);
-        return { x: ex + cos(angle) * d, y: ey + sin(angle) * d };
-    }
-
-    const pL = pupilPos(leftX, leftY);
-    const pR = pupilPos(rightX, rightY);
-
-    ellipse(pL.x, pL.y, 20, 50);
-    ellipse(pR.x, pR.y, 20, 50);
+    ellipse(280, 270, 20, 50);
+    ellipse(390, 270, 20, 50);
     pop();
-
 }
 
-
+function drawMouth(){
+    push();
+    fill("#53051fff");
+    // Make mouth taller when mouse is higher on the canvas, smaller when mouse is lower
+    const minH = 10;
+    const maxH = 120;
+    // map mouseY (0 at top) so top -> maxH, bottom -> minH
+    let mouthH = map(mouseY, 0, height, maxH, minH);
+    mouthH = constrain(mouthH, minH, maxH);
+    ellipse(335, 340, 60, mouthH);
+    pop();
+}
 
 function drawLilypad() {
     push();
@@ -157,11 +145,6 @@ function drawThoughts() {
     fill("black");
     textAlign(CENTER, CENTER);
     textSize(29);
-    text(yummyThoughts, 460, 100);
+    text("la la LAAAAA", 460, 100);
     pop();
-}
-
-function mousePressed() {
-    yummyThoughts = (yummyData.yummy[int(random(0,yummyData.yummy.length))])
-    console.log(yummyData)
 }
