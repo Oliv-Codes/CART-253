@@ -1,0 +1,167 @@
+/**
+ * Variation Jam
+ * Olivia Ho
+ * 
+ * 3 magic wands
+ */
+
+"use strict";
+
+/**
+* Create the canvas and background
+*/
+function setup() {
+    createCanvas(640, 640);
+    cursor('assets/images/Wand_2_s2.png');
+}
+
+let trail = [];
+
+//Variables
+let flyImg;
+
+//colours
+let sky = {
+    r: 30,
+    g: 10,
+    b: 110,
+}
+
+let frog = {
+    r: 70,
+    g: 120,
+    b: 20,
+}
+
+
+//Yummy words array setup
+
+let yummyData = undefined
+let yummyThoughts = "Yummy yum"
+
+function preload () {
+    yummyData = loadJSON("/assets/yummy.json"); 
+    flyImg = loadImage('assets/images/fly.png');
+}
+
+
+/**
+ * Altogether draws
+ */
+function draw() {
+    drawSky();
+    drawWater();
+    drawLilypad();
+    drawFrog();
+    drawNormalPupil();
+    
+    // Check if mouse is over the frog
+    if (mouseX > 230 && mouseX < 230 + 210 && mouseY > 280 && mouseY < 280 + 210) {
+        drawSpeechBubble(); drawThoughts();
+    }
+    
+        //Mouse Trail
+    trail.push({ x: mouseX+ random (-30,30), y: mouseY+ random (-20,20) });
+    let maxTrailLength = 20; // Adjust this value for longer/shorter trails
+    if (trail.length > maxTrailLength) {
+        trail.shift(); // Remove the oldest element
+    }
+
+    
+    for (let i = 0 ; i < trail.length; i++ ){
+        let pos = trail[i]
+        image (flyImg, pos.x + random (-30,30) , pos.y + random (-5,5), 25, 15)
+        console.log(pos)
+
+    }
+}
+    
+
+
+
+//scene draws
+
+function drawSky() {
+   background(sky.r,sky.g,sky.b); 
+}
+
+function drawWater() {
+    push();
+    fill ("#0b4538ff");
+    noStroke();
+    rect(0,360,width,300);
+    pop();
+}
+
+function drawFrog() {
+    push();
+    fill (frog.r,frog.g,frog.b);
+    noStroke();
+    rect(230, 280, 210, 210, 50);
+    ellipse(200, 460, 250, 60);
+    ellipse(480, 460, 250, 60);
+    quad(230, 460, 300, 460, 300, 540, 200, 540);
+    quad(370, 460, 430, 460, 470, 540, 370, 540);
+    fill ("#d1ed52ff");
+    rect(250, 330, 170, 150, 50);
+    fill ("#ecf3d1ff");
+    circle(280, 270, 70);
+    circle(390, 270, 70);
+    pop();
+}
+
+function drawNormalPupil(){
+    push();
+    fill("black");
+    // pupils follow the mouse but stay within the eye area
+    const leftX = 275, leftY = 270;
+    const rightX = 395, rightY = 270;
+    const maxOffset = 16; // maximum pupil offset from eye center
+
+    function pupilPos(ex, ey) {
+        const mx = constrain(mouseX, 0, width);
+        const my = constrain(mouseY, 0, height);
+        const angle = atan2(my - ey, mx - ex);
+        const d = min(dist(mx, my, ex, ey), maxOffset);
+        return { x: ex + cos(angle) * d, y: ey + sin(angle) * d };
+    }
+
+    const pL = pupilPos(leftX, leftY);
+    const pR = pupilPos(rightX, rightY);
+
+    ellipse(pL.x, pL.y, 20, 50);
+    ellipse(pR.x, pR.y, 20, 50);
+    pop();
+
+}
+
+
+
+function drawLilypad() {
+    push();
+    fill ("#255305ff");
+    arc(350,500,500,200,90,120);
+    fill ("#8c1490ff");
+    circle(460, 400, 140);
+    pop();
+}
+
+function drawSpeechBubble(){
+    push();
+    rect(310, 60, 300, 130, 20);
+    pop();
+}
+
+function drawThoughts() {
+    push();
+    fill("black");
+    textAlign(CENTER, CENTER);
+    textSize(29);
+    text(yummyThoughts, 460, 100);
+    pop();
+}
+
+function mousePressed() {
+    yummyThoughts = (yummyData.yummy[int(random(0,yummyData.yummy.length))])
+    console.log(yummyData)
+}

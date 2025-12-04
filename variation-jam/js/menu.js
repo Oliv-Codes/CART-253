@@ -12,7 +12,7 @@
 */
 function setup() {
     createCanvas(640, 640);
-    cursor('assets/images/Wand_1_s.png');
+    cursor('assets/images/Wand_3_s.png');
 
 }
 
