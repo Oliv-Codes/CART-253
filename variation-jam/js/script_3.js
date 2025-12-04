@@ -1,6 +1,6 @@
 /**
  * Variation Jam
- * wop
+ * Olivia Ho
  * 
  * 3 magic wands
  */
@@ -64,7 +64,7 @@ function draw() {
     
     for (let i = 0 ; i < trail.length; i++ ){
         let pos = trail[i]
-        image (musicImg, pos.x, pos.y, 25, 15)
+        image (musicImg, pos.x, pos.y, 25, 25)
         console.log(pos)
 
     }
